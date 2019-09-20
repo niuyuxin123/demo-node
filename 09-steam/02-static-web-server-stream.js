@@ -10,7 +10,13 @@ http.createServer((req,res)=>{
   }
   var fileName=__dirname+req.url;
   console.log(fileName);
-  fs.createReadStream(fileName).pipe(res);
+  if(fs.createReadStream(fileName)){
+     fs.createReadStream(fileName).pipe(res);
+  }
+  else {
+     res.statusCode = 404;
+     res.end(req.url + ' not exist!');        
+  }
   //res.end(fs.readFileSync(fileName).toString('utf8'));
 }).listen(8080);
 console.log(process.pid);
