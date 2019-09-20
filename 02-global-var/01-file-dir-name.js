@@ -11,14 +11,16 @@ console.log('file name',file);
 file =__dirname +"\\data\\db.xml";
 console.log("file name in window:",file);
 /*
-switch(os){
+switch(process.platform){
   case 'linux':
-    file=__dirname+'';
+    file=__dirname+'/data/db.xml';
     break;
   case 'win32':
-    file=__dirname+'';
+    file=__dirname+'\\data\\db.xml';
 
     break;
+  default:
+    file='something woring!';
 }
 */
 const path=require('path');
