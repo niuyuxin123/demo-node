@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 const width = 16,
-            height = 16;
+      height = 16;
 
 var pixelByteSize = width * height * 4;
 var totalSize = pixelByteSize + 54;

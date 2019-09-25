@@ -5,13 +5,13 @@ const fs=require('fs'),
 
 if(fs.existsSync(file)){
 
-if(fs.statSync(file).isFile()){
-  fs.unlinkSync(file);
+  if(fs.statSync(file).isFile()){
+    fs.unlinkSync(file);
 
-}
+  }
 }
 else{
-console.error('%s不存在！',file);
-process.exit(1);
+  console.error('%s不存在！',file);
+  process.exit(1);
 }
 

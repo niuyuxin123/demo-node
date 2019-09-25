@@ -11,7 +11,7 @@ radio.on('play',(station)=>{
   log('lalala……');
 });
 radio.on('stop',(station)=>{
-log('%s FM %s closed!',station.name,station.freq);
+  log('%s FM %s closed!',station.name,station.freq);
 });
 
 

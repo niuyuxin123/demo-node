@@ -9,9 +9,9 @@ stdin.on('data',function(data){
 });
 stdin.on('end',function(){
   stdout.end();
-})
+});
 for(var c='a'.charCodeAt(0); c<='z'.charCodeAt(0); c++) {
-    stdout.write(String.fromCharCode(c));
+  stdout.write(String.fromCharCode(c));
 }
 stdout.write('\n');
 

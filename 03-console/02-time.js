@@ -13,6 +13,6 @@ function longTask(){
 }
 console.time('DOWLOAD FILE');
 var n =longTask();
-console.timeEnd("DOWLOAD FILE");
+console.timeEnd('DOWLOAD FILE');
 console.log('n=%d',n);
 

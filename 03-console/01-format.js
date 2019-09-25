@@ -7,7 +7,7 @@ var wd={
   'age':43
 };
 
-console.log("Name:%s\t Age:%d",wd.name,wd.age);
+console.log('Name:%s\t Age:%d',wd.name,wd.age);
 console.log('Wangding Info:',wd);//对象类型
 
 console.log('name:',wd.name);//逗号间隔输出

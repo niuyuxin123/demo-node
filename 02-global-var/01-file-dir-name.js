@@ -8,8 +8,8 @@ var file=__dirname+'/data/db.xml';
 console.log('file name',file);
 
 //window data file
-file =__dirname +"\\data\\db.xml";
-console.log("file name in window:",file);
+file =__dirname +'\\data\\db.xml';
+console.log('file name in window:',file);
 /*
 switch(process.platform){
   case 'linux':
@@ -26,4 +26,4 @@ switch(process.platform){
 const path=require('path');
 
 file=path.join(__dirname,'data','db.xml');
-console.log("path",file);
+console.log('path',file);

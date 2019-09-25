@@ -16,8 +16,8 @@ function Dog(name,energy){
       clearInterval(timer);
     }
   },1000);
-this.getName=()=>_name;
-this.getEnergy=()=>_energy;
+  this.getName=()=>_name;
+  this.getEnergy=()=>_energy;
 }
 Dog.prototype=EventEmitter.prototype;
 module.exports=Dog;

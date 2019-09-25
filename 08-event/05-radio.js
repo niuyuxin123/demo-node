@@ -22,8 +22,8 @@ function Radio(station){
       _listeners[evt]=[];
     }
   
-  _listeners[evt].push(fn);
-  }
+    _listeners[evt].push(fn);
+  };
 }
 
 module.exports=Radio;

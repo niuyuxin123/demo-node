@@ -14,8 +14,8 @@ e.on('hello',function(){
   console.log('hello,event emit!');
 });
 e.on('bye',function(){
-  console.log('good bye')
+  console.log('good bye');
   process.exit();
-})
+});
 
 

@@ -12,5 +12,5 @@ process.on('SIGINT',()=>{
     process.exit();
   },5000);
 
-})
+});
 

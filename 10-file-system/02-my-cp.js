@@ -8,11 +8,11 @@ const fs=require('fs'),
 //dst=fs.createwritestream
 var sta,stm;
 if(fs.existsSync(src)){
-stm=fs.createReadStream(src).pipe(fs.createWriteStream(dst));
-stm.on('close',()=>{
-  sta=fs.statSync(src);
-  fs.chmodSync(dst,sta.mode);
-})
+  stm=fs.createReadStream(src).pipe(fs.createWriteStream(dst));
+  stm.on('close',()=>{
+    sta=fs.statSync(src);
+    fs.chmodSync(dst,sta.mode);
+  });
 }
 else{
   console.error('%s not exist!',src);
