@@ -11,7 +11,7 @@ global.setTimeout(function(){
 },16000);
 process.on('message',function(msg){
   console.log('I get msg:%s',msg);
-})
+});
 
 
 
