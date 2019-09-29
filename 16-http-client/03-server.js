@@ -15,11 +15,11 @@ http.request(option,function(res){
   //print response header
   var weather='';
   res.on('data',function(data){
-      weather+=data.toString('utf8');
+    weather+=data.toString('utf8');
   });
   res.on('end',function(data){
-      weather=JSON.parse(weather);
-      console.log(weather.result.today.temperature);
+    weather=JSON.parse(weather);
+    console.log(weather.result.today.temperature);
   });
 
     

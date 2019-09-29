@@ -5,20 +5,20 @@ const http=require('http'),
 var addr='http://v.juhe.cn/weather/index?cityname='+city+'&key=70b20823f67b5f0ca3358b796fd83260';
 log(addr);
 http.get(global.encodeURI(addr),function(res){
-    //print start line
-    log(`HTTP/${res.httpVersion} ${res.statusCode} ${res.statusMessage}`);
-    //print response header
-    log(res.headers);
-    log('');
-    //print response header
-    var weather='';
-    res.on('data',function(data){
-      weather+=data.toString('utf8');
-    });
-    res.on('end',function(data){
-      weather=JSON.parse(weather);
-      log(weather.result.today.temperature);
-    });
+  //print start line
+  log(`HTTP/${res.httpVersion} ${res.statusCode} ${res.statusMessage}`);
+  //print response header
+  log(res.headers);
+  log('');
+  //print response header
+  var weather='';
+  res.on('data',function(data){
+    weather+=data.toString('utf8');
+  });
+  res.on('end',function(data){
+    weather=JSON.parse(weather);
+    log(weather.result.today.temperature);
+  });
 });
 
 
